@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    mpp-solar:
+        privileged: true
+        volumes:
+            - '/dev:/dev:rw'
+            - './mpp-solar.conf:/etc/mpp-solar.conf'
+        container_name: mpp-solar
+        image: 'therealouin/mpp-solar:0.2-debian-stable'
